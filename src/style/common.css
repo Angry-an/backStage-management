@@ -1,0 +1,13 @@
+.container .nav-left {
+  height: calc(100vh);
+  background-color: #001529;
+}
+.container .main {
+  height: calc(100vh);
+  background-color: #ccc;
+  overflow: auto;
+}
+.container .content {
+  position: relative;
+  padding: 20px;
+}

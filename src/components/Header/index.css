@@ -1,0 +1,38 @@
+.header-top {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-align: right;
+  border-bottom: 1px solid #001529;
+}
+.weatherTime {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+.weatherTime .time {
+  text-align: right;
+}
+.weatherTime .navTit {
+  text-align: center;
+}
+.weatherTime .navTit:after {
+  position: absolute;
+  content: '';
+  left: 45%;
+  bottom: -20px;
+  border: 10px solid #fff;
+  border-left: 10px solid rgba(255, 255, 255, 0);
+  border-right: 10px solid rgba(255, 255, 255, 0);
+  border-bottom: 10px solid rgba(255, 255, 255, 0);
+}
+.header {
+  background-color: #fff;
+}
+.weatherImg {
+  width: 30px;
+  height: 22.5px;
+  margin-top: -4px;
+  margin-left: 10px;
+  margin-right: 4px;
+}
