@@ -38,14 +38,19 @@ export default class Header extends React.Component{
     }
     
     render(){
+        const menuType = this.props.menuType;
         return(
             <div className="header">
+            {
+                menuType?'':
                 <Row className="header-top">
                     <Col span="24">
                         <span>欢迎，{this.state.userName}</span>
                         <a href="#" style={{marginLeft:"6px"}}>退出</a>
                     </Col>
                 </Row>
+            }
+                
                 <Row className="weatherTime">
                     <Col span="4" className="navTit">首页</Col>
                     <Col span="20" className="time"><span>{this.state.systemTime}</span><img className="weatherImg" alt="" src={this.state.dayPictureUrl}/> <span></span><span>{this.state.weather}</span></Col>

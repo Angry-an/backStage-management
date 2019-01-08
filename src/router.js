@@ -14,7 +14,10 @@ import Tabs from './pages/ui/tabs'
 import LoginForm from './pages/form/loginForm'
 import RegisterForm from './pages/form/registerForm'
 import BasicTable from './pages/table/basicTbable'
-import TestTable from './pages/table/apiTest'
+import HightTable from './pages/table/hightTable'
+import Order from './pages/order/index'
+import Common from './common'
+import OrderDetail from './pages/order/orderDetail'
 export default class IRouter extends React.Component{
     render(){
         return(
@@ -33,12 +36,25 @@ export default class IRouter extends React.Component{
                                 <Route path='/admin/form/formLogin' component={LoginForm}></Route>
                                 <Route path='/admin/form/register' component={RegisterForm}></Route>
                                 <Route path='/admin/table/baseTables' component={BasicTable}></Route>
-                                <Route path='/admin/table/highTables' component={TestTable}></Route>
+                                <Route path='/admin/table/highTables' component={HightTable}></Route>
+                                <Route path='/admin/order' component={Order}></Route>                                                     
                                 <Route component=  {Nomatch} />
                             </Switch>   
                         </Admin>
-                    }></Route>
-                    <Route path="/login" component = {Login}></Route>
+                    }>
+
+                    </Route>
+                    <Route path="/common" render={()=>
+                        <Common>
+                             <Switch>   
+                                <Route path='/common/order/detail/:orderId' component={OrderDetail}></Route>                                              
+                                <Route component=  {Nomatch} />
+                            </Switch>   
+                           
+                        </Common>
+                    }>                      
+                    </Route>
+                    {/* <Route path="/login" component = {Login}></Route> */}
                 </App>
             </HashRouter>
         )

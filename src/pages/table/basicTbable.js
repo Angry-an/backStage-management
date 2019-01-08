@@ -36,7 +36,7 @@ export default class BasicTable extends React.Component{
         this.request();
       }
     request =()=>{
-        let _this =this;
+       
         axios.ajax({
             url:'/table/list',
             data:{
@@ -98,8 +98,9 @@ export default class BasicTable extends React.Component{
         })
     }
     render(){
-
-          const columns = [{
+        
+        
+        const columns = [{
             title: '姓名',
             dataIndex: 'name',
             key: 'name',
@@ -120,13 +121,14 @@ export default class BasicTable extends React.Component{
                 return sex == 1 ? '男':'女'
             }
           }];
-          const selectRowKeys  = this.state.selectRowKeys;
+          
+        const selectRowKeys  = this.state.selectRowKeys;
 
-          const rowSelection = {
+        const rowSelection = {
               type:'radio',
               selectedRowKeys:selectRowKeys
           }
-          const rowCheckSelection = {
+        const rowCheckSelection = {
             onChange: (selectedRowKeys, selectedRows) => {
                 this.setState({
                     selectedRowKeys,

@@ -36,3 +36,7 @@
   margin-left: 10px;
   margin-right: 4px;
 }
+.simple-page .header {
+  background: #1890ff;
+  color: #fff;
+}
